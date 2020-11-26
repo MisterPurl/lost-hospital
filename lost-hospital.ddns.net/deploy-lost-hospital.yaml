@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx-lost-hospital
-        image: puurl/alp-lost-hospital:v1
+        image: puurl/alp-lost-hospital:v2
         ports:
-        - containerPort: 5000
+        - containerPort: 3000
