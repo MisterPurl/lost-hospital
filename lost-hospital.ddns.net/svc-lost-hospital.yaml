@@ -4,9 +4,9 @@ metadata:
   name: svc-lost-hospital
   namespace: lost-hospital
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
-    app: nginx-lost-hospital
+    app: deploy-lost-hospital
   ports:
     - port: 8080
       targetPort: 3000
