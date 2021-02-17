@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-lost-in-hospital
+  namespace: lost-in-hospital
+spec:
+ storageClassName: manuel
+ capacity:
+  storage: 3Gi
+ accessModes:
+  - ReadWriteMany
+ nfs: 
+    server: 10.10.110.5
+    path: /nfs_infra/pv-lost-in-hospital
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-lost-in-hospital-model
+  namespace: lost-in-hospital
+spec:
+ storageClassName: manuel
+ accessModes:
+  - ReadWriteMany
+ resources: 
+  requests:
+    storage: 2Gi

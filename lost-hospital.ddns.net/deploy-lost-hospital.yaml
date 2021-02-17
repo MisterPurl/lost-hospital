@@ -18,3 +18,10 @@ spec:
         image: puurl/alp-lost-hospital:v3
         ports:
         - containerPort: 3000
+        volumeMounts:
+          - name: modele
+            mountPath: "/usr/src/app/model/"
+      volumes:
+        - name: model
+          persistentVolumeClaim:
+            claimName: pvc-lost-in-hospital-model

@@ -1,13 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-<<<<<<< HEAD:lost-hospital.ddns.net/ingress-lost-hospital..yaml
   name: ingress-lost-in-hospital
   namespace: lost-in-hospital
-=======
-  name: ing-lost-hospital
-  namespace: lost-hospital
->>>>>>> 0e0b8e64b8364d36acd87eae6e3f9dfef2a8d350:lost-hospital.ddns.net/ingress-lost-hospital.yaml
   annotations:
     kubernetes.io/ingress.class: traefik
 spec:

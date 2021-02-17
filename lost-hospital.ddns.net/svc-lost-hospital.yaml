@@ -6,14 +6,7 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-<<<<<<< HEAD:lost-hospital.ddns.net/svc-lost-hospital..yaml
     app: deploy-lost-in-hospital
   ports:
     - port: 8080
       targetPort: 3000
-=======
-    app: deploy-lost-hospital
-  ports:
-    - port: 8080
-      targetPort: 3000
->>>>>>> 0e0b8e64b8364d36acd87eae6e3f9dfef2a8d350:lost-hospital.ddns.net/svc-lost-hospital.yaml
