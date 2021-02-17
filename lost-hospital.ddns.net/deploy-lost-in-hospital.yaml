@@ -16,6 +16,7 @@ spec:
       containers:
       - name: deploy-lost-in-hospital
         image: puurl/alp-lost-hospital:v3
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
         volumeMounts:
