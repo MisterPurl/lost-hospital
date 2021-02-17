@@ -1,19 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-lost-hospital
-  namespace: lost-hospital
+  name: ingress-lost-in-hospital
+  namespace: lost-in-hospital
   annotations:
     kubernetes.io/ingress.class: traefik
 spec:
   rules:
-  - host: "lost-hospital.ddns.net"
+  - host: "lost-in-hospital.ddns.net"
     http:
       paths:
         - path: /
           pathType: Prefix
           backend:
             service:
-              name: svc-lost-hospital
+              name: svc-lost-in-hospital
               port: 
                 number: 8080

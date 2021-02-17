@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-lost-hospital
-  namespace: lost-hospital
+  name: deploy-lost-in-hospital
+  namespace: lost-in-hospital
 spec:
   selector:
     matchLabels:
-      app: nginx-lost-hospital
-  replicas: 1
+      app: deploy-lost-in-hospital
+  replicas: 5
   template:
     metadata:
       labels:
-        app: nginx-lost-hospital
+        app: deploy-lost-in-hospital
     spec:
       containers:
-      - name: nginx-lost-hospital
-        image: puurl/alp-lost-hospital:v1
+      - name: deploy-lost-in-hospital
+        image: puurl/alp-lost-hospital:v3
         ports:
-        - containerPort: 5000
+        - containerPort: 3000
