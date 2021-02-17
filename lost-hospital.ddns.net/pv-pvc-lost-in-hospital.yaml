@@ -22,6 +22,10 @@ spec:
  storageClassName: manuel
  accessModes:
   - ReadWriteMany
+ persistentVolumeReclaimPolicy: Retain
+ mountOptions:
+  - hard
+  - nfsvers=4.1
  resources: 
   requests:
     storage: 2Gi
