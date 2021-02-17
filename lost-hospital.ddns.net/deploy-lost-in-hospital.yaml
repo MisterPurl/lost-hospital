@@ -24,5 +24,6 @@ spec:
             mountPath: "/usr/src/app/model/"
       volumes:
         - name: model
-          persistentVolumeClaim:
-            claimName: pvc-lost-in-hospital-model
+          nfs: 
+            server: 10.10.110.5
+            path: /nfs_infra/pv-lost-in-hospital
