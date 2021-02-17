@@ -19,7 +19,7 @@ spec:
         ports:
         - containerPort: 3000
         volumeMounts:
-          - name: modele
+          - name: model
             mountPath: "/usr/src/app/model/"
       volumes:
         - name: model
